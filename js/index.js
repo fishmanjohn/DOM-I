@@ -41,13 +41,35 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let nav = document.getElementsByTagName('a');
-nav[0].textContent = siteContent.nav["nav-item-1"];
-nav[1].textContent = siteContent.nav["nav-item-2"];
-nav[2].textContent = siteContent.nav["nav-item-3"];
-nav[3].textContent = siteContent.nav["nav-item-4"];
-nav[4].textContent = siteContent.nav["nav-item-5"];
-nav[5].textContent = siteContent.nav["nav-item-6"];
+
+let navigation = document.querySelectorAll('nav a');
+navigation[0].textContent = siteContent.nav["nav-item-1"];
+navigation[1].textContent = siteContent.nav["nav-item-2"];
+navigation[2].textContent = siteContent.nav["nav-item-3"];
+navigation[3].textContent = siteContent.nav["nav-item-4"];
+navigation[4].textContent = siteContent.nav["nav-item-5"];
+navigation[5].textContent = siteContent.nav["nav-item-6"];
+
+navigation.forEach(title => {
+title.style.color='green';
+})
+
+
+const newContOne = document.createElement("a");
+
+newContOne.textContent= "cheezburgerz"
+
+const newContTwo = document.createElement('a');
+newContTwo.textContent = "I can has"
+
+const parentElement = document.querySelector('nav');
+
+parentElement.append(newContOne);
+
+parentElement.prepend(newContTwo);
+
+
+//
 
 let head1 = document.querySelector('.cta-text h1');
 head1.textContent = siteContent.cta["h1"];
