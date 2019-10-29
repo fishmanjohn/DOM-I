@@ -52,8 +52,8 @@ nav[5].textContent = siteContent.nav["nav-item-6"];
 let head1 = document.querySelector('.cta-text h1');
 head1.textContent = siteContent.cta["h1"];
 
-let aweButt = document.getElementsByName('button');
-aweButt = siteContent["cta"]["button"];
+let aweButt = document.querySelector('.cta-text button');
+aweButt.textContent = siteContent["cta"]["button"];
 
 let codeCircle = document.getElementById("cta-img");
 codeCircle.setAttribute('src', siteContent["cta"]["img-src"])
@@ -78,3 +78,30 @@ servicesHead.textContent = siteContent["main-content"]["services-h4"];
 
 let servicesText = document.querySelector('.bottom-content :first-child p');
 servicesText.textContent = siteContent["main-content"]["services-content"];
+
+let productHead = document.querySelector('.bottom-content :nth-child(2) h4');
+productHead.textContent = siteContent["main-content"]["product-h4"];
+
+let productText = document.querySelector('.bottom-content :nth-child(2) p');
+productText.textContent = siteContent["main-content"]["product-content"];
+
+let visionHead = document.querySelector('.bottom-content :last-child h4');
+visionHead.textContent = siteContent["main-content"]["vision-h4"];
+
+let visionText = document.querySelector('.bottom-content :last-child p');
+visionText.textContent = siteContent["main-content"]["vision-content"];
+
+let contactHead = document.querySelector('.contact h4');
+contactHead.textContent = siteContent["contact"]["contact-h4"];
+
+let address = document.querySelector('.contact :nth-child(2)');
+address.textContent = siteContent["contact"]["address"];
+
+let phone = document.querySelector('.contact :nth-child(3)');
+phone.textContent =siteContent["contact"]["phone"];
+
+let email = document.querySelector('.contact :nth-child(4)');
+email.textContent = siteContent["contact"]["email"];
+
+let footyFerda = document.querySelector('footer p');
+footyFerda.textContent = siteContent["footer"]["copyright"];
